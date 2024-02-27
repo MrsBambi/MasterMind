@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>Jugador.kt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #727072; font-style: italic;}
+.s1 { color: #fcfcfa;}
+.s2 { color: #f2d5a1; font-weight: bold; font-style: italic;}
+.s3 { color: #ff6188; font-style: italic;}
+.s4 { color: #939293;}
+.s5 { color: #c0aaff;}
+.s6 { color: #c994ff;}
+.s7 { color: #fff48a;}
+.s8 { color: #ff6188;}
+.s9 { color: #78dce8;}
+</style>
+</head>
+<body bgcolor="#181818">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Jugador.kt</font>
+</center></td></tr></table>
+<pre><span class="s0">/**</span>
+ <span class="s0">* Jugador</span>
+ <span class="s0">*</span>
+ <span class="s0">* </span><span class="s2">@constructor </span><span class="s0">Create empty Jugador</span>
+ <span class="s0">*/</span>
+<span class="s3">class </span><span class="s1">Jugador </span><span class="s4">{</span>
+    <span class="s3">var </span><span class="s1">colores </span><span class="s5">= </span><span class="s1">Array</span><span class="s4">(</span><span class="s6">4</span><span class="s4">){</span><span class="s7">&quot;&quot;</span><span class="s4">}</span>
+
+    <span class="s0">/**</span>
+     <span class="s0">* Elegir color</span>
+     <span class="s0">*</span>
+     <span class="s0">*/</span>
+    <span class="s3">fun </span><span class="s1">elegirColor </span><span class="s4">() {</span>
+        <span class="s3">var </span><span class="s1">num </span><span class="s5">= </span><span class="s6">1</span>
+        <span class="s3">for </span><span class="s4">(</span><span class="s1">i </span><span class="s3">in this</span><span class="s4">.</span><span class="s1">colores</span><span class="s4">.</span><span class="s1">indices</span><span class="s4">) {</span>
+            <span class="s3">var </span><span class="s1">eleccion </span><span class="s8">: </span><span class="s1">String</span>
+
+            <span class="s1">println</span><span class="s4">(</span><span class="s7">&quot;Los colores validos son: &quot;</span><span class="s4">)</span>
+            <span class="s1">println</span><span class="s4">(</span><span class="s7">&quot;[AZUL][VERDE][ROJO][ROSA][AMARILLO][MAGENTA]&quot;</span><span class="s4">)</span>
+            <span class="s3">do </span><span class="s4">{</span>
+                <span class="s1">print</span><span class="s4">(</span><span class="s7">&quot;</span><span class="s9">\n</span><span class="s7">Introduce el &quot; </span><span class="s5">+ </span><span class="s1">num </span><span class="s5">+ </span><span class="s7">&quot;ª color: &quot;</span><span class="s4">)</span>
+                <span class="s1">eleccion </span><span class="s5">= </span><span class="s1">readln</span><span class="s4">().</span><span class="s1">uppercase</span><span class="s4">()</span>
+                <span class="s3">when </span><span class="s4">(</span><span class="s1">eleccion</span><span class="s4">) {</span>
+                    <span class="s7">&quot;AZUL&quot; </span><span class="s8">-&gt; </span><span class="s1">colores</span><span class="s4">[</span><span class="s1">i</span><span class="s4">] </span><span class="s5">= </span><span class="s1">Colores</span><span class="s4">.</span><span class="s1">AZUL</span><span class="s4">.</span><span class="s1">toString</span><span class="s4">()</span>
+                    <span class="s7">&quot;ROJO&quot; </span><span class="s8">-&gt; </span><span class="s1">colores</span><span class="s4">[</span><span class="s1">i</span><span class="s4">] </span><span class="s5">= </span><span class="s1">Colores</span><span class="s4">.</span><span class="s1">ROJO</span><span class="s4">.</span><span class="s1">toString</span><span class="s4">()</span>
+                    <span class="s7">&quot;VERDE&quot; </span><span class="s8">-&gt; </span><span class="s1">colores</span><span class="s4">[</span><span class="s1">i</span><span class="s4">] </span><span class="s5">= </span><span class="s1">Colores</span><span class="s4">.</span><span class="s1">VERDE</span><span class="s4">.</span><span class="s1">toString</span><span class="s4">()</span>
+                    <span class="s7">&quot;ROSA&quot; </span><span class="s8">-&gt; </span><span class="s1">colores</span><span class="s4">[</span><span class="s1">i</span><span class="s4">] </span><span class="s5">= </span><span class="s1">Colores</span><span class="s4">.</span><span class="s1">ROSA</span><span class="s4">.</span><span class="s1">toString</span><span class="s4">()</span>
+                    <span class="s7">&quot;AMARILLO&quot; </span><span class="s8">-&gt; </span><span class="s1">colores</span><span class="s4">[</span><span class="s1">i</span><span class="s4">] </span><span class="s5">= </span><span class="s1">Colores</span><span class="s4">.</span><span class="s1">AMARILLO</span><span class="s4">.</span><span class="s1">toString</span><span class="s4">()</span>
+                    <span class="s7">&quot;MAGENTA&quot; </span><span class="s8">-&gt; </span><span class="s1">colores</span><span class="s4">[</span><span class="s1">i</span><span class="s4">] </span><span class="s5">= </span><span class="s1">Colores</span><span class="s4">.</span><span class="s1">MAGENTA</span><span class="s4">.</span><span class="s1">toString</span><span class="s4">()</span>
+                    <span class="s3">else </span><span class="s8">-&gt; </span><span class="s1">print</span><span class="s4">(</span><span class="s7">&quot;</span><span class="s9">\n </span><span class="s7">Introduce uno de los colores validos&quot;</span><span class="s4">)</span>
+                <span class="s4">}</span>
+            <span class="s4">} </span><span class="s3">while </span><span class="s4">(</span><span class="s3">this</span><span class="s4">.</span><span class="s1">colores</span><span class="s4">[</span><span class="s1">i</span><span class="s4">].</span><span class="s1">isBlank</span><span class="s4">() </span><span class="s5">|| </span><span class="s3">this</span><span class="s4">.</span><span class="s1">colores</span><span class="s4">[</span><span class="s1">i</span><span class="s4">].</span><span class="s1">isEmpty</span><span class="s4">())</span>
+            <span class="s1">num</span><span class="s5">++</span>
+        <span class="s4">}</span>
+    <span class="s4">}</span>
+<span class="s4">}</span></pre>
+</body>
+</html>

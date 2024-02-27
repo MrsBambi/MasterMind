@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>Main.kt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #727072; font-style: italic;}
+.s1 { color: #fcfcfa;}
+.s2 { color: #ff6188; font-style: italic;}
+.s3 { color: #939293;}
+.s4 { color: #c0aaff;}
+.s5 { color: #ff6188;}
+.s6 { color: #c994ff;}
+.s7 { color: #fff48a;}
+.s8 { color: #78dce8;}
+</style>
+</head>
+<body bgcolor="#181818">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Main.kt</font>
+</center></td></tr></table>
+<pre><span class="s0">/**</span>
+ <span class="s0">* Main</span>
+ <span class="s0">*</span>
+ <span class="s0">*/</span>
+<span class="s2">fun </span><span class="s1">main</span><span class="s3">() {</span>
+    <span class="s2">var </span><span class="s1">player </span><span class="s4">= </span><span class="s1">Jugador</span><span class="s3">()</span>
+    <span class="s2">var </span><span class="s1">tablero </span><span class="s4">= </span><span class="s1">Tablero</span><span class="s3">()</span>
+    <span class="s2">var </span><span class="s1">exit </span><span class="s5">: </span><span class="s1">Boolean</span>
+    <span class="s2">var </span><span class="s1">turno </span><span class="s4">= </span><span class="s6">1</span>
+
+    <span class="s2">do </span><span class="s3">{</span>
+        <span class="s1">println</span><span class="s3">(</span><span class="s7">&quot;Turno </span><span class="s8">$</span><span class="s1">turno</span><span class="s7">:&quot;</span><span class="s3">)</span>
+        <span class="s1">player</span><span class="s3">.</span><span class="s1">elegirColor</span><span class="s3">()</span>
+        <span class="s1">tablero</span><span class="s3">.</span><span class="s1">rellenarTablero</span><span class="s3">(</span><span class="s1">player</span><span class="s3">, </span><span class="s1">turno</span><span class="s3">)</span>
+        <span class="s1">exit </span><span class="s4">= </span><span class="s1">tablero</span><span class="s3">.</span><span class="s1">mostrarPista</span><span class="s3">(</span><span class="s1">player</span><span class="s3">, </span><span class="s1">turno</span><span class="s3">)</span>
+        <span class="s1">tablero</span><span class="s3">.</span><span class="s1">mostrarTablero</span><span class="s3">()</span>
+        <span class="s1">turno</span><span class="s4">++</span>
+    <span class="s3">} </span><span class="s2">while </span><span class="s3">(</span><span class="s4">!</span><span class="s1">exit </span><span class="s4">&amp;&amp; </span><span class="s1">turno </span><span class="s4">&lt;</span><span class="s6">5</span><span class="s3">)</span>
+    <span class="s2">if </span><span class="s3">(</span><span class="s1">exit</span><span class="s3">){</span>
+        <span class="s1">println</span><span class="s3">(</span><span class="s7">&quot;¡¡¡Enhorabuena has ganado el juego!!!&quot;</span><span class="s3">)</span>
+    <span class="s3">} </span><span class="s2">else </span><span class="s3">{</span>
+        <span class="s1">println</span><span class="s3">(</span><span class="s7">&quot;Has perdido el juego, te deseo suerte para la proxima. O;)&quot;</span><span class="s3">)</span>
+    <span class="s3">}</span>
+<span class="s3">}</span></pre>
+</body>
+</html>
