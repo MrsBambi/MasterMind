@@ -19,6 +19,6 @@ fun main() {
     if (exit){
         println("¡¡¡Enhorabuena has ganado el juego!!!")
     } else {
-        println("Has perdido los juego, te deseo suerte para la proxima. O;)")
+        println("Has perdido los juego, te deseo suerte para la proxima. ;)")
     }
 }
